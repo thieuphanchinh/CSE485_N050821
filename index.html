@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/fav.png" type="image/x-icon"/>
+
+    <title>Ôn thi giữa kì môn công nghệ Web</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/mestyles.css">
+    <link rel="stylesheet" href="./assets/css/hieu.css">
+    <link rel="stylesheet" href="./assets/fonts/ionicons.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/me.js"></script>
+    
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+            <div class="container"><a class="navbar-brand" href="#">Thi online</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Trang chủ</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Dropdown </a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                        </li>
+                    </ul><span class="navbar-text actions"> <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Đăng nhập</b></span></a>
+                    <a class="btn btn-light action-button" role="button" href="#">Đăng kí</a></span></div>
+            </div>
+        </nav>
+    </div>
+    
+    <!--sign in modal start-->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content title1">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title title1"><span style="color:orange"></span></h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" action="login.php?q=index.php" method="POST">
+  <fieldset>
+  
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="email"></label>  
+    <div class="col-md-6">
+    <input id="email" name="email" autocomplete="new-password" placeholder="Nhập email của bạn" class="form-control input-md" type="email">
+      
+    </div>
+  </div>
+  
+  
+  <!-- Password input-->
+  <div class="form-group">
+    <label class="col-md-3 control-label" for="password"></label>
+    <div class="col-md-6">
+      <input id="password" name="password" autocomplete="new-password" placeholder="Nhập mật khẩu" class="form-control input-md" type="password">
+      
+    </div>
+  </div>
+  
+        </div>
+        <div class="modal-footer">
+          
+          <button type="submit" class="btn btn-primary">Đăng nhập</button>
+          </fieldset>
+  </form>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!--sign in modal closed-->
+
+<!-- bat dau lam -->
+<!-- video -->
+<div class="video">
+    <div class="container">
+            <div class="row">
+                <div class="video1 col-md-6">
+                        <video height="auto" width="420" autoplay="autoplay" controls="controls">
+                            <source src="assets/video/pph.mp4" type="audio/mpeg" />
+                        <h3 class="name">Phương pháp học tập hiệu quả</h3>
+                </div>
+                <div class="video2 col-md-6">
+                        <video height="auto" width="415" autoplay="autoplay" controls="controls" >
+                            <source src="assets/video/htmlcb.mp4" type="audio/mpeg">
+                        <h3 class="name" >Demo phương thức dạy học</h3>
+            </div>
+    </div>
+</div>
+
+<!-- slide -->
+<div class="slide">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/h3.jpg" alt="Los Angeles" width="1100" height="500">
+                <div class="carousel-caption">
+                <h3>HTML 5</h3>
+                <p>Phục vụ Online Marketing</p>
+                </div>   
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/h4.jpg" alt="Chicago" width="1100" height="500">
+                <div class="carousel-caption">
+                <h3>Học vô số</h3>
+                <p>Học tập là niềm vui</p>
+                </div>   
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/h5.jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption">
+                <h3>Thảo luận</h3>
+                <p>Các chuyên gia hàng đầu</p>
+                </div>   
+            </div>
+            <div class="carousel-item">
+                <img src="assets/images/h6.jpg" alt="New York" width="1100" height="500">
+                <div class="carousel-caption">
+                <h3>Khách hàng tiềm năng</h3>
+                <p>We love the Big Apple!</p>
+                </div>   
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="team-boxed">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Đội ngũ </h2>
+                <p class="text-center">Thiết kế & Phát triển</p>
+            </div>
+            <div class="row people">
+                <div class="col-md-6 col-lg-6 item">
+                    <div class="box"><img class="rounded-circle" src="assets/images/chinh.jpg">
+                        <h3 class="name">Thiều Phan Chính</h3>
+                        <p class="title">Phát triển</p>
+                        <p class="description"></p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 item">
+                    <div class="box"><img class="rounded-circle" src="assets/images/hieu.jpg">
+                        <h3 class="name">Đặng Minh Hiếu</h3>
+                        <p class="title">Thiết kế</p>
+                        <p class="description"></p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src="assets/img/3.jpg">
+                        <h3 class="name">Carl Kent</h3>
+                        <p class="title">Stylist</p>
+                        <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, et interdum justo suscipit id. Etiam dictum feugiat tellus, a semper massa. </p>
+                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+  <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">The most exam online 2018</p>
+        </footer>
+    </div>
+  
+</body>
+
+</html>

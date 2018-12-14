@@ -1,0 +1,297 @@
+/*Thanh điều hướng */
+.me-nav #navcol-1 ul li a{
+    color: white;
+}
+.me-nav #navcol-1 .dropdown-menu a:hover{
+    color: black;
+}
+.me-header .me-nav #navcol-1 .nav-link{
+    color: #c8c4c4;
+}
+.me-header .me-nav #navcol-1 .nav-link:hover{
+    color: white;
+}
+.me-header .me-nav #navcol-1 {
+    color: #c8c4c4;
+}
+.me-header .me-nav #navcol-1:hover{
+    color: rebeccapurple;
+}
+.nav .navbar-nav .navbar-right{
+    float: right;
+}
+.navbar-light .navbar-toggler-icon{
+    background-color: #df4c40;
+}
+#btnDangNhap{
+    border-radius: 40px;
+    font-size: 13px;
+}
+#btnDangNhap:hover{
+    background-color: #df4c40
+}
+#btnDangKy{
+    border-radius: 40px;
+    font-size: 13px;
+}
+#btnDangKy:hover{
+    background-color: #df4c40
+}
+
+
+/* Đường dẫn tắt */
+.card{
+    margin-top: 10px;
+}
+.card .card0{
+    background-color:  #fefbbf;
+}
+.card .card1{
+    background-color: #c6edf9;
+}
+.card .card2{
+    background-color: #fbdada;
+}
+.imgmini{
+    width: 95px;
+}
+.media{
+    margin-bottom: 10px;
+}
+.media-body{
+    margin-left: 10px;
+    font-size: 14px;
+}
+@media (max-width: 992px){
+	.imgmini{
+		display: none;
+    }
+}
+
+
+/*Body*/
+.me-body{
+    background-color: #e4e4e4;
+    position: relative;
+}
+
+/*Footer*/
+.form-text.text-muted {
+    color:white;
+    text-align:center;
+}
+.col.item.social {
+    margin-top:40px;
+}
+.copyright {
+    color:white;
+}
+.me-footer-icon{
+    position: relative;
+}
+.me-footer-icon img{
+    position: absolute;
+    top: -85px;
+    left: 48%;
+    width: 70px;
+}
+
+/* .img1{
+      width: 70px;
+}
+.img0{
+      width: 120px;
+} */
+
+/*Đường dẫn */
+.breadcrumb{
+    background-color: white;
+    height: 30px;
+}    
+.path{
+    margin-top: 80px;
+}
+strong {
+    color: black;
+}
+strong:hover{
+    color: #df4c40;
+}
+
+
+/* .row .rowbody{
+    top: 10px;
+} */
+
+/*Nội dung giới thiệu*/
+.imgintroduce {
+    width:270px;
+  }
+.row .introduce{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c8c4c4;
+}
+@media (max-width: 992px){
+	.imgintroduce{
+		width: 180px;
+    }
+}
+h3 {
+    color: black;
+}
+h3:hover{
+    color: #df4c40;
+}
+
+/* .row .introduce .one{
+    margin-top: 10px;
+} */
+
+
+/* .me-header .me-nav .me-content{
+    width: 1140px;
+    margin: 0 auto;
+    background-color: aquamarine;
+} */
+/* .me-header .me-nav .me-content .navbar-brand{
+    float: left;
+} */
+a:hover{
+    text-decoration: none;
+}
+
+
+/* .row .introduce .rowfirst{
+    margin-top: 10px;
+} */
+
+/*Sửa lỗi hiện thị nội dung
+ auto -->scroll
+ */
+/* .me-fix-content p{
+    overflow: hidden;
+    max-height: 100px;
+} */
+/*
+fix nội dung bên phải cũng tương tự
+ý tưởng khác: khi phóng to thì ẩn phần chữ đi
+ */
+
+
+ /*Menu dọc*/
+#mySidenav a {
+	position: absolute;
+	left: -290px;
+	transition: 0.3s;
+	padding: 14px;
+	width: 330px;
+	text-decoration: none;
+	font-size: 15px;
+	color: white;
+	border-radius: 0 5px 5px 0;
+	position: fixed;
+}
+.mySlides img{
+	width: 100%;
+}
+#mySidenav a:hover {
+	left: -2px;
+}
+.sidenav span {
+	position: absolute;
+	right: 16px;
+	top: 17px;
+}
+#hocphi{
+	top: 180px;
+    background-color: #F000FF;
+    width: 100px;
+}
+#email {
+	top: 240px;
+	background-color: #4CAF50;
+}
+#diachi {
+	top: 300px;
+	background-color: #2196F3;
+}
+#sdt {
+	top: 360px;
+	background-color: #f44336;
+}
+#fb {
+	top: 420px;
+	background-color: #555;
+}
+.main{
+    top:500px;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+	.Left-Content{
+		display: none;
+    }
+}
+@media (max-width: 992px){
+	.Left-Content{
+		display: none;
+    }
+}
+/* @media (min-width: 992px) and (max-width: 1200px) {
+	.imgmini{
+		display: none;
+    }
+} */
+
+
+/* @media (max-width: 768px){
+	.path{
+		margin-top: 500px;
+    }
+} */
+
+
+
+
+/*Slide Show*/
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+#demo{
+    margin-top: 80px;
+    
+}
+/*Nội dung chính trang chủ */
+.container-1{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*Điểm qua 1 số ND chính (trang chủ)*/
+.item1{
+    background-color: #fefbbf;
+    margin: 10px auto;
+}
+
+
+/*Button Xem thêm*/
+.xemthem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.btn-primary{
+    border-radius: 40px;
+    background-color: #df4c40;
+    border: #df4c40
+}
+.btn-primary:hover{
+    background-color: #c6edf9
+}
+/*Khóa học (trang chủ)*/
+.row1{
+    background-color: #c6edf9; 
+    margin-top: -20px; 
+    padding: 20px; 
+    margin-right: 10px
+}

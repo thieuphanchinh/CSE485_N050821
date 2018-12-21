@@ -104,7 +104,7 @@
                             <li class="nav-item" role="presentation"><a class="nav-link" href="dash.php?q=2">Xếp hạng</a></li>
                             
                             <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Đề thi </a>
-                                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="dash.php?q=4">Thêm đề thi</a><a class="dropdown-item" role="presentation" href="dash.php?q=5">Sửa đề thi</a><a class="dropdown-item" role="presentation" href="#">Phản hồi</a></div>
+                                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="dash.php?q=4">Thêm đề thi</a><a class="dropdown-item" role="presentation" href="dash.php?q=5">Sửa đề thi</a><a class="dropdown-item" role="presentation" href="dash.php?q=themcauhoi">Thêm câu hỏi</a></div>
                             </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self">
@@ -137,12 +137,13 @@
         if($rowcount == 0){
           echo '<tr><td>'.$c++.'</td><td>'.$title.'</td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
           <td><b>
-          
+          <a href="dash.php?q=themcauhoi&eid='.$eid.'&n=1" class="pull-right btn sub1" style="margin:0px;background:#99cc32"><span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Thêm câu hỏi</b></span></a>
           </b></td></tr>';
+
         }
         else
         {
-        echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="This quiz is already solve by you" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+        echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="Đã làm" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
           <td><b></b></td></tr>';
         }
         }
@@ -495,12 +496,24 @@ echo '</table></div>';}
         
         }
         ?>
-        
+
+
+
+
+<!--         new                -->
+
+            <?php
+            include_once 'themcauhoi.php';
+
+
+
+
+            ?>
+
         
         </div><!--container closed-->
         </div>
       </div>
-
 
 
 

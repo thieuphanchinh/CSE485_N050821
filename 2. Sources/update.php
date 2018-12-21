@@ -108,6 +108,7 @@ header("location:dash.php?q=0");
 }
 }
 
+
 //quiz start
 if(@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
 $eid=@$_GET['eid'];
@@ -226,6 +227,66 @@ $sun=$row['score'];
 $sun=$sun-$s;
 $q=mysqli_query($con,"UPDATE `rank` SET `score`=$sun ,time=NOW() WHERE email= '$email'")or die('Error174');
 header("location:account.php?q=quiz&step=2&eid=$eid&n=1&t=$t");
+}
+
+
+
+
+
+//new
+////////////////////////////////
+//add one question
+
+//add question
+if(isset($_SESSION['key'])){
+    if(@$_GET['q']== 'themcauhoi' && $_SESSION['key']=='vip') {
+        $n=@$_GET['n'];
+        $eid=@$_GET['eid'];
+        $ch=@$_GET['ch']; // day la choice(dap an dung)
+
+        for($i=1;$i<=$n;$i++)
+        {
+            $qid=uniqid();
+            $qns=$_POST['qns'.$i];
+            $qlevel=$_POST['qlevel'.$i];
+            $q3=mysqli_query($con,"INSERT INTO questions VALUES  ('$eid','$qid','$qns' , '$ch' , '$i','$qlevel')");
+            $oaid=uniqid();
+            $obid=uniqid();
+            $ocid=uniqid();
+            $odid=uniqid();
+            $a=$_POST[$i.'1'];
+            $b=$_POST[$i.'2'];
+            $c=$_POST[$i.'3'];
+            $d=$_POST[$i.'4'];
+            $qa=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$a','$oaid')") or die('Lỗi thêm đáp án A');
+            $qb=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$b','$obid')") or die('Lỗi thêm đáp án B');
+            $qc=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$c','$ocid')") or die('Lỗi thêm đáp án C');
+            $qd=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$d','$odid')") or die('Lỗi thêm đáp án D');
+            $e=$_POST['ans'.$i];
+            switch($e)
+            {
+                case 'a':
+                    $ansid=$oaid;
+                    break;
+                case 'b':
+                    $ansid=$obid;
+                    break;
+                case 'c':
+                    $ansid=$ocid;
+                    break;
+                case 'd':
+                    $ansid=$odid;
+                    break;
+                default:
+                    $ansid=$oaid;
+            }
+
+
+            $qans=mysqli_query($con,"INSERT INTO answer VALUES  ('$qid','$ansid')");
+
+        }
+        header("location:dash.php?q=0");
+    }
 }
 
 ?>

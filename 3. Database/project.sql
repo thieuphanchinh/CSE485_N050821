@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 21, 2018 lúc 10:00 AM
+-- Thời gian đã tạo: Th12 21, 2018 lúc 11:30 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.2.12
 
@@ -62,7 +62,12 @@ INSERT INTO `answer` (`qid`, `ansid`) VALUES
 ('5c1b75705c1f8', '5c1b75705c897'),
 ('5c1b75705fdcf', '5c1b757060bff'),
 ('5c1b75706581a', '5c1b7570667b2'),
-('5c1b75706d037', '5c1b75706ddf4');
+('5c1b75706d037', '5c1b75706ddf4'),
+('5c1cbd66e100c', '5c1cbd66e24be'),
+('5c1cbd67c482d', '5c1cbd67c51a2'),
+('5c1cbd688d555', '5c1cbd688ea33'),
+('5c1cbe22c3653', '5c1cbe22c3746'),
+('5c1cbee490bfc', '5c1cbee492588');
 
 -- --------------------------------------------------------
 
@@ -102,7 +107,7 @@ CREATE TABLE `history` (
 
 INSERT INTO `history` (`email`, `eid`, `score`, `level`, `sahi`, `wrong`, `date`) VALUES
 ('chinhtp62@wru.vn', '5c1b73f842207', 0, 2, 1, 1, '2018-12-20 10:57:25'),
-('chinhtp62@wru.vn', '5c1b7494b317e', 5, 5, 5, 0, '2018-12-20 10:57:53');
+('chinhtp62@wru.vn', '5c1b7494b317e', -5, 5, 0, 5, '2018-12-21 09:09:01');
 
 -- --------------------------------------------------------
 
@@ -148,7 +153,27 @@ INSERT INTO `options` (`qid`, `option`, `optionid`) VALUES
 ('5c1b75706d037', ' new_function myFunction()', '5c1b75706ddeb'),
 ('5c1b75706d037', ' function myFunction()', '5c1b75706ddf4'),
 ('5c1b75706d037', ' create myFunction()', '5c1b75706ddf6'),
-('5c1b75706d037', 'myFunction()', '5c1b75706ddf8');
+('5c1b75706d037', 'myFunction()', '5c1b75706ddf8'),
+('5c1cbd66e100c', '', '5c1cbd66e24be'),
+('5c1cbd66e100c', '', '5c1cbd66e24c7'),
+('5c1cbd66e100c', '', '5c1cbd66e24c9'),
+('5c1cbd66e100c', '', '5c1cbd66e24ca'),
+('5c1cbd67c482d', '', '5c1cbd67c51a2'),
+('5c1cbd67c482d', '', '5c1cbd67c51a9'),
+('5c1cbd67c482d', '', '5c1cbd67c51aa'),
+('5c1cbd67c482d', '', '5c1cbd67c51ab'),
+('5c1cbd688d555', '', '5c1cbd688ea33'),
+('5c1cbd688d555', '', '5c1cbd688ea42'),
+('5c1cbd688d555', '', '5c1cbd688ea43'),
+('5c1cbd688d555', '', '5c1cbd688ea44'),
+('5c1cbe22c3653', 'fopen(“time.txt”,”r”);', '5c1cbe22c3746'),
+('5c1cbe22c3653', 'fopen(“time.txt”);', '5c1cbe22c3749'),
+('5c1cbe22c3653', 'open(“time.txt”,”r”);', '5c1cbe22c374b'),
+('5c1cbe22c3653', 'f(“time.txt”,”r”);', '5c1cbe22c374c'),
+('5c1cbee490bfc', ' <js> ', '5c1cbee492588'),
+('5c1cbee490bfc', ' <javascript> ', '5c1cbee49258f'),
+('5c1cbee490bfc', ' Hyperlinks and Text Markup Language', '5c1cbee492590'),
+('5c1cbee490bfc', 'adfds', '5c1cbee492591');
 
 -- --------------------------------------------------------
 
@@ -161,21 +186,26 @@ CREATE TABLE `questions` (
   `qid` text NOT NULL,
   `qns` text NOT NULL,
   `choice` int(10) NOT NULL,
-  `sn` int(11) NOT NULL
+  `sn` int(11) NOT NULL,
+  `qlevel` tinyint(4) DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `questions`
 --
 
-INSERT INTO `questions` (`eid`, `qid`, `qns`, `choice`, `sn`) VALUES
-('5c1b73f842207', '5c1b74688ca24', 'HTML viết tắt của: ', 4, 1),
-('5c1b73f842207', '5c1b746890320', 'Chọn thẻ HTML cho tiêu đề lớn nhất:', 4, 2),
-('5c1b7494b317e', '5c1b75705826f', 'Làm thế nào để bạn viết \"Hello World\" trong PHP', 4, 1),
-('5c1b7494b317e', '5c1b75705c1f8', 'Tất cả các biến trong PHP bắt đầu bằng ký hiệu nào?', 4, 2),
-('5c1b7494b317e', '5c1b75705fdcf', 'Cú pháp PHP tương tự nhất với:', 4, 3),
-('5c1b7494b317e', '5c1b75706581a', 'Làm thế nào để bạn có được thông tin từ một biểu mẫu được gửi bằng phương thức \"get\"?', 4, 4),
-('5c1b7494b317e', '5c1b75706d037', 'Cách chính xác để tạo một hàm trong PHP là gì?', 4, 5);
+INSERT INTO `questions` (`eid`, `qid`, `qns`, `choice`, `sn`, `qlevel`) VALUES
+('5c1b73f842207', '5c1b74688ca24', 'HTML viết tắt của: ', 4, 1, 1),
+('5c1b73f842207', '5c1b746890320', 'Chọn thẻ HTML cho tiêu đề lớn nhất:', 4, 2, 1),
+('5c1b7494b317e', '5c1b75705826f', 'Làm thế nào để bạn viết \"Hello World\" trong PHP', 4, 1, 1),
+('5c1b7494b317e', '5c1b75705c1f8', 'Tất cả các biến trong PHP bắt đầu bằng ký hiệu nào?', 4, 2, 1),
+('5c1b7494b317e', '5c1b75705fdcf', 'Cú pháp PHP tương tự nhất với:', 4, 3, 1),
+('5c1b7494b317e', '5c1b75706581a', 'Làm thế nào để bạn có được thông tin từ một biểu mẫu được gửi bằng phương thức \"get\"?', 4, 4, 1),
+('5c1b7494b317e', '5c1b75706d037', 'Cách chính xác để tạo một hàm trong PHP là gì?', 4, 5, 1),
+('5c1b7494b317e', '5c1cbd66e100c', '', 0, 1, 0),
+('5c1b7494b317e', '5c1cbd67c482d', '', 0, 1, 0),
+('5c1b7494b317e', '5c1cbd688d555', '', 0, 1, 0),
+('5c1b7494b317e', '5c1cbee490bfc', 'What is the correct way to open the file “time.txt” as readable?', 4, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -220,7 +250,7 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`email`, `score`, `time`) VALUES
-('chinhtp62@wru.vn', -5, '2018-12-20 10:57:53');
+('chinhtp62@wru.vn', -15, '2018-12-21 09:09:01');
 
 -- --------------------------------------------------------
 

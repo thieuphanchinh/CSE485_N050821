@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 21, 2018 lúc 07:24 AM
+-- Thời gian đã tạo: Th12 21, 2018 lúc 10:00 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.2.12
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`email`, `password`) VALUES
-('admin@wru.vn', '123456');
+('admin@wru.vn', 'e10adc3949ba59abbe56e057f20f883e');
 
 -- --------------------------------------------------------
 

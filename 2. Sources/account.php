@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ôn thi giữa kì môn Công nghệ Web</title>
-    <link rel="icon" href="./assets/images/fav.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./assets/css/mestyles.css" />
+    <link rel="icon" href="./assets/images/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/mestyles.css">
     <script src="./assets/js/jquery.min.js" type="text/javascript"></script>
     <script src="./assets/js/bootstrap.min.js"  type="text/javascript"></script>
-    <link rel="stylesheet" href="./assets/css/accountchinh.css" />
-    <link rel="stylesheet" href="./assets/css/earth-day-night-click-on-image-account-chinh.css" />
+    <link rel="stylesheet" href="./assets/css/accountchinh.css">
+    <link rel="stylesheet" href="./assets/css/earth-day-night-click-on-image-account-chinh.css">
+
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/accountseachchinh.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+
+
 </head>
 <body>
 
@@ -23,14 +30,18 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="account.php?q=1">Trang chủ</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="account.php?q=2">Lịch sử</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="account.php?q=3">Xếp hạng</a></li>
+
+                    <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Tiện ích </a>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="updatepersonalinformation.php">Thông tin cá nhân</a><a class="dropdown-item" role="presentation" href="#">Sửa ...</a><a class="dropdown-item" role="presentation" href="#">Phản hồi</a></div>
+                    </li>
                 </ul>
-                <form class="form-inline mr-auto" target="_self">
-                    <div class="form-group"><label for="search-field">
-                    <i class="fa fa-search"></i>
-                    </label><input class="form-control search-field" type="search" name="search" id="search-field" placeholder="Từ khóa "/>
-                    </div>
-                </form>
-                <a class="btn btn-light action-button" role="button" href="#">Tìm kiếm</a></div>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
         </div>
     </nav>
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 20, 2018 lúc 11:58 AM
+-- Thời gian đã tạo: Th12 21, 2018 lúc 07:24 AM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.2.12
 
@@ -242,7 +242,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `gender`, `college`, `email`, `mob`, `password`) VALUES
-('Chính', 'Nam', '58TH1', 'chinhtp62@wru.vn', 582238970, '123456');
+('Thiều Phan Chính', 'male', '58TH1', 'chinhtp62@wru.vn', 582339871, 'e10adc3949ba59abbe56e057f20f883e'),
+('Đặng Minh Hiếu', 'male', '58TH1', 'hieudm620@wru.vn', 582339871, 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Chỉ mục cho các bảng đã đổ

@@ -6,7 +6,7 @@ if(isset($_SESSION["email"])){
 include_once 'dbConnection.php';
 $ref=@$_GET['q'];
 $email = $_POST['email'];
-$password = $_POST['password'];
+$password = md5($_POST['password']);
 
 
 //$password=md5($password); 

@@ -2,7 +2,7 @@
 include_once 'dbConnection.php';
 ob_start();
 $name = $_POST['name'];
-$name= ucwords(strtolower($name));
+//$name= ucwords(strtolower($name));
 $gender = $_POST['gender'];
 $email = $_POST['email'];
 $college = $_POST['college'];

@@ -42,7 +42,7 @@
                             <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
                         </li>
                     </ul><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập</button>
-                    <a class="btn btn-light action-button" role="button" href="#">Đăng kí</a></span></div>
+                    <span><button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Đăng ký</button></span></div>
             </div>
         </nav>
     </div>
@@ -77,7 +77,50 @@
 </form>
 </div>
 
+    <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="sign.php" method="POST">
+            <div class="container">
+                <h1>Đăng kí</h1>
+                <p>Mời bạn nhập thông tin</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Nhập Email của bạn: " name="email" required>
+                <br>
 
+                <label for="psw"><b>Mật khẩu</b></label>
+                <input type="password" placeholder="Nhập mật khẩu:" name="password" required>
+
+                <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                <input type="password" placeholder="Nhập lại mật khẩu:" name="password-repeat" required>
+
+                <label for="psw-repeat"><b>Họ Tên:</b></label>
+                <input type="text" placeholder="Họ tên của bạn:" name="name" required>
+
+                <label for="psw-repeat"><b>Giới tính:</b></label><br>
+                <input type="radio" name="gender" value="Nam"> Nam<br>
+                <input type="radio" name="gender" value="Nữ"> Nữ<br>
+                <input type="radio" name="gender" value="Khác"> Khác<br>
+
+                <label for="psw-repeat"><b>Lớp:</b></label>
+                <input type="text" placeholder="Lớp bạn đang học:" name="college">
+
+                <label for="psw-repeat"><b>SĐT</b></label>
+                <input type="tel" name="mob">
+                <br>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                </label>
+
+                <p>Chấp nhận <a href="#" style="color:dodgerblue">Điều khoản & Chính sách</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Hủy</button>
+                    <button type="submit" class="signupbtn">Đăng kí</button>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
 

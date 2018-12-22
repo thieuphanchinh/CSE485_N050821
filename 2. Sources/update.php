@@ -240,29 +240,35 @@ header("location:account.php?q=quiz&step=2&eid=$eid&n=1&t=$t");
 //add question
 if(isset($_SESSION['key'])){
     if(@$_GET['q']== 'themcauhoi' && $_SESSION['key']=='vip') {
-        $n=@$_GET['n'];
+        // $n=@$_GET['n'];
         $eid=@$_GET['eid'];
         $ch=@$_GET['ch']; // day la choice(dap an dung)
 
-        for($i=1;$i<=$n;$i++)
+        //mysqli_query chi tra ve true or false
+
+        $gettotalquiz=mysqli_query($con,"SELECT total FROM quiz WHERE eid='$eid'");
+        $row = mysqli_fetch_array($gettotalquiz);
+        $i=$row['total'];
+        $bien=$i+1;
+        for($i;$i<$bien;$i++)
         {
             $qid=uniqid();
-            $qns=$_POST['qns'.$i];
-            $qlevel=$_POST['qlevel'.$i];
-            $q3=mysqli_query($con,"INSERT INTO questions VALUES  ('$eid','$qid','$qns' , '$ch' , '$i','$qlevel')");
+            $qns=$_POST['qns'];
+            $qlevel=$_POST['qlevel'];
+            $q3=mysqli_query($con,"INSERT INTO questions VALUES  ('$eid','$qid','$qns' , '$ch' , '$bien','$qlevel')");
             $oaid=uniqid();
             $obid=uniqid();
             $ocid=uniqid();
             $odid=uniqid();
-            $a=$_POST[$i.'1'];
-            $b=$_POST[$i.'2'];
-            $c=$_POST[$i.'3'];
-            $d=$_POST[$i.'4'];
+            $a=$_POST['1'];
+            $b=$_POST['2'];
+            $c=$_POST['3'];
+            $d=$_POST['4'];
             $qa=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$a','$oaid')") or die('Lỗi thêm đáp án A');
             $qb=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$b','$obid')") or die('Lỗi thêm đáp án B');
             $qc=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$c','$ocid')") or die('Lỗi thêm đáp án C');
             $qd=mysqli_query($con,"INSERT INTO options VALUES  ('$qid','$d','$odid')") or die('Lỗi thêm đáp án D');
-            $e=$_POST['ans'.$i];
+            $e=$_POST['ans'];
             switch($e)
             {
                 case 'a':
@@ -283,6 +289,7 @@ if(isset($_SESSION['key'])){
 
 
             $qans=mysqli_query($con,"INSERT INTO answer VALUES  ('$qid','$ansid')");
+            $addonequestion=mysqli_query($con,"UPDATE `quiz` SET `total`=`total`+1,`time`=`time`+1,date=NOW() WHERE eid='$eid'");
 
         }
         header("location:dash.php?q=0");

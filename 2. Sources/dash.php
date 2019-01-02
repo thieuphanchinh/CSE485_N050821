@@ -108,7 +108,7 @@
                                         <a class="dropdown-item" role="presentation" href="dash.php?q=themcauhoi">Thêm câu hỏi</a>
 
                                         <a class="dropdown-item" role="presentation" href="dashdethimau.php">Thêm đề thi mẫu</a>
-                                      
+                                        <a class="dropdown-item" role="presentation" href="./admin/xoadethimau.php">Xóa đề thi mẫu</a>
                                       
                                       
                                       </div>

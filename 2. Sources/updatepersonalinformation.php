@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Thông tin cá nhân</title>
 
-    <link rel="stylesheet" href="./assets/css/editprofilechinh.css"
+    <link rel="stylesheet" href="./assets/css/editprofilechinh.css">
 </head>
 <body>
     

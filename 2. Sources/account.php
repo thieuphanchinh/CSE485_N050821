@@ -32,7 +32,9 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="account.php?q=3">Xếp hạng</a></li>
 
                     <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Tiện ích </a>
-                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="updatepersonalinformation.php">Thông tin cá nhân</a><a class="dropdown-item" role="presentation" href="#">Sửa ...</a><a class="dropdown-item" role="presentation" href="#">Phản hồi</a></div>
+                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="updatepersonalinformation.php">Thông tin cá nhân</a><a class="dropdown-item" role="presentation" href="#">Sửa ...</a>
+                        <a class="dropdown-item" role="presentation" href="accountdethimau.php">Đề thi mẫu cuối kì</a>
+                        <a class="dropdown-item" role="presentation" href="#">Phản hồi</a></div>
                     </li>
                 </ul>
                 <div class="search-container">

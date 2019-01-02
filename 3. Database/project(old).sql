@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 02, 2019 lúc 05:00 AM
+-- Thời gian đã tạo: Th12 22, 2018 lúc 03:37 PM
 -- Phiên bản máy phục vụ: 10.1.37-MariaDB
 -- Phiên bản PHP: 7.2.12
 
@@ -73,28 +73,6 @@ INSERT INTO `answer` (`qid`, `ansid`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `dethimau`
---
-
-CREATE TABLE `dethimau` (
-  `idde` int(11) NOT NULL,
-  `namede` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `linkde` char(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `notede` text COLLATE utf8mb4_unicode_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `dethimau`
---
-
-INSERT INTO `dethimau` (`idde`, `namede`, `linkde`, `notede`) VALUES
-(1, 'A', '98a2303cc2354f0a78d4f209e339aac9.jpg', ''),
-(2, 'B', '29355194_559355981110232_9128809295069958324_o.jpg', ''),
-(3, 'C', 'Naruto.jpg', '3');
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `feedback`
 --
 
@@ -129,7 +107,8 @@ CREATE TABLE `history` (
 --
 
 INSERT INTO `history` (`email`, `eid`, `score`, `level`, `sahi`, `wrong`, `date`) VALUES
-('chinhtp62@wru.vn', '5c1b73f842207', 0, 2, 1, 1, '2018-12-20 10:57:25');
+('chinhtp62@wru.vn', '5c1b73f842207', 0, 2, 1, 1, '2018-12-20 10:57:25'),
+('chinhtp62@wru.vn', '5c1b7494b317e', -6, 6, 0, 6, '2018-12-22 14:36:36');
 
 -- --------------------------------------------------------
 
@@ -265,7 +244,7 @@ CREATE TABLE `rank` (
 --
 
 INSERT INTO `rank` (`email`, `score`, `time`) VALUES
-('chinhtp62@wru.vn', 6, '2018-12-27 03:18:07');
+('chinhtp62@wru.vn', -16, '2018-12-22 14:36:36');
 
 -- --------------------------------------------------------
 
@@ -287,34 +266,18 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `gender`, `college`, `email`, `mob`, `password`) VALUES
-('Thiều Phan Chính', 'Nam', '58TH1', 'chinhtp62@wru.vn', 582339871, 'e10adc3949ba59abbe56e057f20f883e'),
-('Đặng Minh Hiếu', 'Nam', '58TH1', 'hieudm620@wru.vn', 582339871, 'e10adc3949ba59abbe56e057f20f883e');
+('Thiều Phan Chính', 'male', '58TH1', 'chinhtp62@wru.vn', 582339871, 'e10adc3949ba59abbe56e057f20f883e'),
+('Đặng Minh Hiếu', 'male', '58TH1', 'hieudm620@wru.vn', 582339871, 'e10adc3949ba59abbe56e057f20f883e');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Chỉ mục cho bảng `dethimau`
---
-ALTER TABLE `dethimau`
-  ADD PRIMARY KEY (`idde`);
-
---
 -- Chỉ mục cho bảng `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`email`);
-
---
--- AUTO_INCREMENT cho các bảng đã đổ
---
-
---
--- AUTO_INCREMENT cho bảng `dethimau`
---
-ALTER TABLE `dethimau`
-  MODIFY `idde` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

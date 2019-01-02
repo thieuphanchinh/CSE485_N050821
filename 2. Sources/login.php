@@ -4,7 +4,7 @@ if(isset($_SESSION["email"])){
     session_destroy();
 }
 include_once 'dbConnection.php';
-$ref=@$_GET['q'];
+$ref=$_GET['q'];//bo @
 $email = $_POST['email'];
 $password = md5($_POST['password']);
 

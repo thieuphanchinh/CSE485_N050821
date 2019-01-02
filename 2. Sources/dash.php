@@ -104,7 +104,14 @@
                             <li class="nav-item" role="presentation"><a class="nav-link" href="dash.php?q=2">Xếp hạng</a></li>
                             
                             <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Đề thi </a>
-                                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="dash.php?q=4">Thêm đề thi</a><a class="dropdown-item" role="presentation" href="dash.php?q=5">Sửa đề thi</a><a class="dropdown-item" role="presentation" href="dash.php?q=themcauhoi">Thêm câu hỏi</a></div>
+                                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="dash.php?q=4">Thêm đề thi</a><a class="dropdown-item" role="presentation" href="dash.php?q=5">Sửa đề thi</a>
+                                        <a class="dropdown-item" role="presentation" href="dash.php?q=themcauhoi">Thêm câu hỏi</a>
+
+                                        <a class="dropdown-item" role="presentation" href="dashdethimau.php">Thêm đề thi mẫu</a>
+                                      
+                                      
+                                      
+                                      </div>
                             </li>
                         </ul>
                         <form class="form-inline mr-auto" target="_self">

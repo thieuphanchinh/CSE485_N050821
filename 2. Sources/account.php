@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/css/accountchinh.css">
     <link rel="stylesheet" href="./assets/css/earth-day-night-click-on-image-account-chinh.css">
 
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./assets/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="./assets/css/accountseachchinh.css">
 <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
@@ -38,9 +38,9 @@
                     </li>
                 </ul>
                 <div class="search-container">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                    <form action="#/action_page.php">
+                        <input type="text" placeholder="Tìm đề thi" name="search">
+                        <button type="submit"><span class="glyphicon glyphicon-search"></span></button>
                     </form>
                 </div>
 
@@ -257,7 +257,7 @@ echo'</table>';
 
 
 
-        <svg width="1366px" height="768px" viewBox="0 0 1366 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg width="1366px" height="768px" viewBox="0 0 1366 768" version="1.1" >
             <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
             <title>Earth Day & Night</title>
             <defs>

@@ -1,8 +1,9 @@
+
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
 input[type=email], input[type=tel], input[type=text], input[type=password] {
-  width: 100%;
+  /*width: 100%;*/
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -18,7 +19,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  display: block;
 }
 
 button:hover {
@@ -122,3 +123,10 @@ span.psw {
   height: 170px;
   width: 100px;
 }
+.btnget{
+  display: block;
+}
+#btnbackhome{
+  display: none;
+}
+

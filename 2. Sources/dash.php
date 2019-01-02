@@ -36,9 +36,9 @@
 
 <div id="background">
     <div id="islandContainer" class="animated">
-        <img src="http://www.dejanlukac.com/test/_img/small-cloud.png" class="cloudSmall animated" alt="" />
-        <img src="http://www.dejanlukac.com/test/_img/big-cloud.png" class="cloudBig animated" alt="" />
-        <img src="http://www.dejanlukac.com/test/_img/floating-island.png" class="island" alt="" />
+        <img src="./assets/images/small-cloud.png" class="cloudSmall animated" alt="" />
+        <img src="./assets/images/big-cloud.png" class="cloudBig animated" alt="" />
+        <img src="./assets/images/floating-island.png" class="island" alt="" />
         <div id="islandInsideContainer">
 
             <div id="leftWaterfall">

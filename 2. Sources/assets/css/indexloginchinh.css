@@ -164,10 +164,27 @@ textarea {
 
 .button-block {
     display: block;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .forgot {
     margin-top: -20px;
     text-align: right;
+}
+
+.container{
+    background-color:#f1f1f1;
+}
+.close{
+    display: none;
+}
+.cancelbtn{
+    display: none;
+}
+#ChapNhan{
+    color:dodgerblue;
+}
+
+#remember{
+    margin-bottom:15px;
 }

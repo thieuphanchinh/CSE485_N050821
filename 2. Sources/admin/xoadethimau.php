@@ -41,7 +41,8 @@
             $notede = $row['notede'];
             
             echo '<tr><td>'.$idde.'</td><td>'.$namede.'</td><td>'.$notede.'</td><td>'.'
-            <form action="actiondeletedethimau" method="post" enctype="multipart/form-data">
+            <form action="actiondeletedethimau.php" method="post" enctype="multipart/form-data">
+            <input type=textbox hiddnen
             <input type="submit" value="Xoá đề thi mẫu" name="submit">
             </form>
             </td></tr>';

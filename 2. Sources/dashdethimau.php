@@ -10,15 +10,15 @@
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
     
-    Tên đề thi
+    Tên đề thi:
     <input type="text" name="namede" id="namede">
     <br>
-    Ghi chú
+    Ghi chú     :
     <input type="text" name="notede" id="notede">
     <br>
-    Select image to upload:
+    Chọn file cần tải lên:
     <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+    <input type="submit" value="Tải lên" name="submit">
 </form>
 
 

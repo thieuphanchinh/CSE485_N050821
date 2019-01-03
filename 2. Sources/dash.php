@@ -148,11 +148,11 @@
           </b></td></tr>';
 
         }
-        else
-        {
-        echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="Đã làm" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
-          <td><b></b></td></tr>';
-        }
+        // else
+        // {
+        // echo '<tr style="color:#99cc32"><td>'.$c++.'</td><td>'.$title.'&nbsp;<span title="Đã làm" class="glyphicon glyphicon-ok" aria-hidden="true"></span></td><td>'.$total.'</td><td>'.$sahi*$total.'</td><td>'.$time.'&nbsp;min</td>
+        //   <td><b></b></td></tr>';
+        // }
         }
         $c=0;
         echo '</table></div>';
@@ -318,7 +318,7 @@ echo '</table></div>';}
         if(@$_GET['q']==4 && !(@$_GET['step']) ) {
         echo ' 
         <div class="row">
-        <span class="title1" style="margin-left:40%;font-size:30px;"><b>Thông tin bộ đề thi</b></span><br /><br />
+        <span class="title1" style="margin-left:40%;font-size:45px;"><b>Thêm bộ đề thi mới</b></span><br /><br />
          <div class="col-md-3"></div><div class="col-md-6">   <form class="form-horizontal title1" name="form" action="update.php?q=addquiz"  method="POST">
         <fieldset>
         
